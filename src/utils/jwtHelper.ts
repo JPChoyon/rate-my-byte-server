@@ -1,18 +1,21 @@
-import jwt from "jsonwebtoken";
+import jwt, { Secret, SignOptions } from "jsonwebtoken";
+
+// Generate JWT
 const generateToken = (
   payload: string | object | Buffer,
-  secret: string | Buffer,
-  expiresIn: string
-) => {
-  const token = jwt.sign(payload, secret, {
-    expiresIn,
-  });
-  return token;
+  secret: Secret, 
+  expiresIn: SignOptions['expiresIn']
+): string => {
+  const options: SignOptions = { expiresIn };
+  return jwt.sign(payload, secret, options);
 };
 
-const decodedToken = (payload: any, secret: string) => {
-  const decoded = jwt.verify(payload, secret);
-  return decoded;
+// Decode JWT
+const decodedToken = (
+  token: string,
+  secret: Secret
+): string | jwt.JwtPayload => {
+  return jwt.verify(token, secret);
 };
 
 export const jwtHelper = {
