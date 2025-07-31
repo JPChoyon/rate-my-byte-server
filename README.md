@@ -1,6 +1,6 @@
 # Rate My Bite
 
-https://assignment9-flax.vercel.app
+https://project-9-server.vercel.app/
 
 ## 🍔 Overview
 
