@@ -11,11 +11,7 @@ const routes_1 = __importDefault(require("./routes"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use((0, cors_1.default)({
-    origin: [
-        "http://localhost:3000",
-        "https://project-9-client-rho.vercel.app",
-        "https://project-9-server.vercel.app",
-    ],
+    origin: ["http://localhost:3000", "https://rate-my-byte.vercel.app"],
 }));
 app.get("/", (req, res) => {
     res.status(200).json({

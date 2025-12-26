@@ -1,7 +1,7 @@
 import status from "http-status";
 import { User, UserStatus } from "../../../generated/prisma";
 import AppError from "../../errors/AppError";
-import prisma from "../../utils/prismaProvider";
+import { prisma } from "../../utils/prismaProvider"; // ✅ Fixed import
 import { bcryptHelper } from "../../utils/bcryptHelper";
 import { jwtHelper } from "../../utils/jwtHelper";
 import config from "../../config";

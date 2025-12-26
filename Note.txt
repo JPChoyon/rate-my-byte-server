@@ -1,7 +1,0 @@
-npx prisma migrate reset
-npx prisma migrate dev
-git branch
-https://tfdb.com.bd/
-https://github.com/Al-amin07/project-9-server
-https://github.com/Al-amin07/project-9-client
-https://v0.dev/chat/discovery-section-design-JcuwmM1jiSa
