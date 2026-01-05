@@ -16,7 +16,7 @@ app.use(
 app.get("/", (req, res) => {
   res.status(200).json({
     success: true,
-    message: "Server is up and running",
+    message: "Server is up and running with docker",
   });
 });
 app.use("/api", route);

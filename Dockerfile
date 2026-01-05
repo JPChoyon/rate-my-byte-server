@@ -2,14 +2,12 @@ FROM node:20
 
 WORKDIR /app
 
-COPY package.json .
-
+COPY package.json package-lock.json* ./
 COPY prisma ./prisma
 
-RUN npm install
+RUN npm install  
 
 COPY . .
 
 EXPOSE 5000
-
-CMD ["npm", "run","dev"]
+CMD ["npm", "run", "dev"]
